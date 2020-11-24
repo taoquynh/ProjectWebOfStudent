@@ -1,0 +1,207 @@
+.navContainer {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--light-black);
+	z-index: 9999999;
+	opacity: 1;
+
+}
+
+.navContainerStick {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: var(--light-black);
+	z-index: 9999999;
+
+}
+
+.Navbar {
+	display: flex;
+	max-width: 950px;
+	width: 80%;
+	list-style: none;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.Navbar a {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	transition: 0.4s;
+}
+
+.Navbar a:hover {
+	color: var(--orange);
+	transform: scale(1.1);
+}
+
+.navLinkContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navLinkContainer a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+	line-height: 29px;
+	padding: 0 10px
+}
+
+.brandName a {
+	font-size: 4em;
+	line-height: 80px;
+	font-family: "Lobster";
+	white-space: nowrap;
+}
+
+.IconBar {
+	display: flex;
+	list-style: none;
+	font-size: 1.5em;
+	color: white;
+	position: absolute;
+	right: 40px;
+	height: 100%;
+	align-items: center;
+	margin: 0;
+}
+
+.IconBar li {
+	padding: 0px 15px;
+}
+
+.Cart {
+	position: relative;
+}
+
+.Cart span {
+	position: absolute;
+	bottom: -50%;
+	right: 0;
+}
+
+.Cart:hover {
+	cursor: pointer;
+}
+
+.cart .IconBar li:hover {
+	cursor: pointer;
+}
+
+.IconBar li svg {
+	transition: 0.4s;
+}
+
+.IconBar li:hover svg {
+	color: var(--orange);
+	transform: scale(1.1);
+}
+
+@media(max-width:1440px) {
+	.Navbar {
+		max-width: 740px;
+	}
+}
+
+@media(max-width:1368px) {
+	.navContainer {
+		height: 75px;
+	}
+}
+
+@media (max-width:1200px) {
+
+	.navContainer,
+	.navContainerStick {
+		justify-content: space-evenly;
+	}
+
+	.IconBar {
+		position: relative;
+		right: unset;
+		padding: 0;
+		font-size: 2em;
+	}
+
+	.LeftElements {
+		display: flex;
+		font-size: 2em;
+		color: white;
+	}
+
+	.LeftElements div:hover {
+		color: var(--orange);
+		cursor: pointer;
+		transform: scale(1.2);
+	}
+
+	.IconBar li:hover {
+		transform: scale(1.2);
+	}
+
+	.LeftElements div,
+	.IconBar li {
+		padding: 0 20px;
+		transition: 0.4s;
+	}
+
+	.navLinkContainer,
+	.navContainerStick a {
+		transition: 0.3s;
+	}
+
+	.navLinkContainer:hover a {
+		color: var(--orange);
+		transform: scale(1.2);
+	}
+}
+
+
+@media (max-width:500px) {
+
+	.LeftElements,
+	.IconBar {
+		font-size: 1.5em;
+	}
+
+	.LeftElements div,
+	.IconBar li {
+		padding: 0 10px;
+	}
+
+	.Search {
+		position: fixed;
+		bottom: 10%;
+		right: 10%;
+		z-index: 9999;
+		font-size: 2em;
+		background-color: var(--orange);
+		padding: 0px !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		box-shadow:
+			0 2.8px 2.2px rgba(0, 0, 0, 0.084),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.121),
+			0 12.5px 10px rgba(0, 0, 0, 0.15),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.179),
+			0 41.8px 33.4px rgba(0, 0, 0, 0.216),
+			0 100px 80px rgba(0, 0, 0, 0.3);
+		color: white;
+	}
+}
